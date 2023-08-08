@@ -1,5 +1,11 @@
 let bookCollection = [];
 
+const removeBook = (id) => {
+  bookCollection = bookCollection.filter((book) => book.id !== id);
+
+  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
+};
+
 const displayBooks = () => {
   const bookList = document.getElementById('book-list');
   bookList.innerHTML = '';
@@ -48,21 +54,12 @@ const addBook = () => {
   displayBooks();
 };
 
-const removeBook = (id) => {
-  console.log('Removing book with id:', id);
-  bookCollection = bookCollection.filter((book) => book.id !== id);
-
-  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
-  displayBooks();
-};
-
-const addButton = document
-  .getElementById('add-book-button')
-  .addEventListener('click', addBook);
+const addButton = document.getElementById('add-book-button');
+addButton.addEventListener('click', addBook);
 
 window.addEventListener('load', () => {
   const storedBookCollection = JSON.parse(
-    localStorage.getItem('bookCollection')
+    localStorage.getItem('bookCollection'),
   );
 
   if (storedBookCollection) {
