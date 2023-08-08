@@ -1,11 +1,5 @@
 let bookCollection = [];
 
-const removeBook = (id) => {
-  bookCollection = bookCollection.filter((book) => book.id !== id);
-
-  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
-};
-
 const displayBooks = () => {
   const bookList = document.getElementById('book-list');
   bookList.innerHTML = '';
@@ -23,7 +17,6 @@ const displayBooks = () => {
     const buttonElement = document.createElement('button');
     buttonElement.textContent = 'Remove';
     buttonElement.setAttribute('data-id', book.id);
-    buttonElement.addEventListener('click', () => removeBook(book.id));
 
     const hrElement = document.createElement('hr');
 
@@ -31,6 +24,13 @@ const displayBooks = () => {
     bookContainer.appendChild(authorElement);
     bookContainer.appendChild(buttonElement);
     bookContainer.appendChild(hrElement);
+
+    const removeBook = (id) => {
+      bookCollection = bookCollection.filter((book) => book.id !== id);
+      displayBooks();
+      localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
+    };
+    buttonElement.addEventListener('click', () => removeBook(book.id));
   });
 };
 
@@ -42,16 +42,18 @@ const addBook = () => {
   const title = titleInput.value;
   const author = authorInput.value;
 
-  const newBook = { title, author, id };
+  if (title && author) {
+    const newBook = { title, author, id };
 
-  bookCollection.push(newBook);
+    bookCollection.push(newBook);
 
-  localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
+    localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
 
-  // CLEARING INPUTS
-  titleInput.value = '';
-  authorInput.value = '';
-  displayBooks();
+    // CLEARING INPUTS
+    titleInput.value = '';
+    authorInput.value = '';
+    displayBooks();
+  }
 };
 
 const addButton = document.getElementById('add-book-button');
@@ -59,7 +61,7 @@ addButton.addEventListener('click', addBook);
 
 window.addEventListener('load', () => {
   const storedBookCollection = JSON.parse(
-    localStorage.getItem('bookCollection'),
+    localStorage.getItem('bookCollection')
   );
 
   if (storedBookCollection) {
