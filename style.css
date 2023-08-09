@@ -46,15 +46,6 @@ body {
   gap: 5px;
 }
 
-#book-list button {
-  padding: 2px 5px;
-  background-color: #fff;
-}
-
-#book-list button:hover {
-  background-color: rgba(240, 248, 255, 0.5);
-}
-
 .separator {
   width: 10%;
   margin: auto;
@@ -91,5 +82,14 @@ body {
 }
 
 .form-input button:hover {
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+#book-list button {
+  padding: 2px 5px;
+  background-color: #fff;
+}
+
+#book-list button:hover {
   background-color: rgba(240, 248, 255, 0.5);
 }

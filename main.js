@@ -61,7 +61,7 @@ addButton.addEventListener('click', addBook);
 
 window.addEventListener('load', () => {
   const storedBookCollection = JSON.parse(
-    localStorage.getItem('bookCollection')
+    localStorage.getItem('bookCollection'),
   );
 
   if (storedBookCollection) {

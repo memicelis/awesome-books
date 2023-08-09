@@ -1,5 +1,3 @@
-'use strict';
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -12,7 +10,6 @@ class BookCollection {
   constructor() {
     this.books = this.getLocalStorage() || [];
     this.initElements();
-    this.displayBooks();
   }
 
   initElements() {
@@ -24,9 +21,11 @@ class BookCollection {
     const form = document.getElementById('form');
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      console.log('ADD BOOK');
       this.addBook();
     });
   }
+
   getLocalStorage() {
     const storedBookCollection = JSON.parse(
       localStorage.getItem('bookCollection')
@@ -39,7 +38,6 @@ class BookCollection {
   }
 
   displayBooks() {
-    console.log(this.books);
     this.bookList.innerHTML = '';
     this.books.forEach((book) => {
       const bookContainer = document.createElement('article');
@@ -88,4 +86,5 @@ class BookCollection {
 }
 document.addEventListener('DOMContentLoaded', () => {
   const bookCollection = new BookCollection();
+  bookCollection.displayBooks();
 });
