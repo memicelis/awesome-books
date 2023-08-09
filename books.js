@@ -8,7 +8,7 @@ class Book {
 
 class BookCollection {
   constructor() {
-    this.books = this.getLocalStorage() || [];
+    this.books = BookCollection.getLocalStorage() || [];
     this.initElements();
   }
 
@@ -21,12 +21,11 @@ class BookCollection {
     const form = document.getElementById('form');
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      console.log('ADD BOOK');
       this.addBook();
     });
   }
 
-  getLocalStorage() {
+  static getLocalStorage() {
     const storedBookCollection = JSON.parse(
       localStorage.getItem('bookCollection')
     );
