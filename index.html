@@ -3,24 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Awesome Books</title>
   </head>
-  <br>
+  <body>
     <div class="header">
-      <h1>Awesome Books</h1>
+      <h1>All awesome books</h1>
     </div>
     <div class="book-list-container">
       <div id="book-list"></div>
     </div>
-    <div>
-      <input type="text" id="title-input" name="title" placeholder="Title" />
-    </div>
-</br>
-    <div>
-      <input type="text" id="author-input" name="author" placeholder="Author" />
-    </div>
-    </br>
-    <button type="submit" id="add-book-button" class="add-book-button">Add</button>
-    <script src="main.js"></script>
+    <hr class="separator" />
+    <form id="form" class="form" method="post" action="submit">
+      <h1>Add new Book</h1>
+      <div class="form-input">
+        <input type="text" id="title-input" name="title" placeholder="Title" />
+        <input
+          type="text"
+          id="author-input"
+          name="author"
+          placeholder="Author"
+        />
+        <button type="submit" id="add-book-button" class="add-book-button">
+          Add
+        </button>
+      </div>
+    </form>
+    <script src="books.js"></script>
   </body>
 </html>
