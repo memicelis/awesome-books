@@ -7,13 +7,26 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <div class="header">
+    <nav class="navigation">
+    <div class="left-block-navigation">
+      <a href="#">Awesome books</a>
+    </div>
+    <div class="right-block-navigation">
+      <ul class="navigation-links">
+        <li><a href="#list">List</a></li>
+        <li><a href="#form">Add New</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    </nav>
+    <div class="date-container">
+    </div>
+    <div id="list" class="header">
       <h1>All awesome books</h1>
     </div>
     <div class="book-list-container">
       <div id="book-list"></div>
     </div>
-    <hr class="separator" />
     <form id="form" class="form" method="post" action="submit">
       <h1>Add new Book</h1>
       <div class="form-input">
@@ -29,7 +42,7 @@
         </button>
       </div>
     </form>
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <h1>Contact information</h1>
       <br>Do you have any questions or you just want to say "Hello" </br>You can reach out to us</p>
       <ul class="contact-info">
