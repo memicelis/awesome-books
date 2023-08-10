@@ -1,25 +1,21 @@
-const listPage = document.querySelector('.list-section');
-const addPage = document.querySelector('.add-book-section');
-const contactPage = document.querySelector('.contact-section');
+const sections = [
+  document.querySelector('.list-section'),
+  document.querySelector('.add-book-section'),
+  document.querySelector('.contact-section'),
+];
 
-const listPageLink = document.querySelector('.list-page');
-const addPageLink = document.querySelector('.add-page');
-const contactPageLink = document.querySelector('.contact-page');
+const links = [
+  document.querySelector('.list-page'),
+  document.querySelector('.add-page'),
+  document.querySelector('.contact-page'),
+];
 
-listPageLink.addEventListener('click', () => {
-  addPage.classList.add('hidden');
-  contactPage.classList.add('hidden');
-  listPage.classList.remove('hidden');
-});
-
-addPageLink.addEventListener('click', () => {
-  listPage.classList.add('hidden');
-  contactPage.classList.add('hidden');
-  addPage.classList.remove('hidden');
-});
-
-contactPageLink.addEventListener('click', () => {
-  listPage.classList.add('hidden');
-  addPage.classList.add('hidden');
-  contactPage.classList.remove('hidden');
+links.forEach((link, index) => {
+  link.addEventListener('click', () => {
+    links.forEach((link) => link.classList.remove('active'));
+    link.classList.add('active');
+    sections.forEach((section, sectionIndex) => {
+      section.classList.toggle('hidden', index !== sectionIndex);
+    });
+  });
 });

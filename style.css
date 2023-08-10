@@ -48,6 +48,11 @@ p {
   padding: 0;
 }
 
+.navigation-links .active {
+  font-weight: bold;
+  color: black;
+}
+
 .date-container {
   display: flex;
   justify-content: end;
