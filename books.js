@@ -87,3 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookCollection = new BookCollection();
   bookCollection.displayBooks();
 });
+
+// current date and time
+
+function displayDate() {
+  const date = document.querySelector('.date-container');
+  const currentDate = new Date();
+  const options = {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  };
+
+  const formattedData = new Intl.DateTimeFormat('en-US', options).format(
+    currentDate
+  );
+  date.innerHTML = formattedData;
+}
+displayDate();
+
+setInterval(displayDate, 1000);

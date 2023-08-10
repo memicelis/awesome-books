@@ -31,21 +31,23 @@
 
 # 📖 [Awesome_Books] <a name="about-project"></a>
 
-[Awesome_Books] is a project that was given by Microverse to create a book list with adding and removing buttons.
+[Awesome_Books] is a project that was given by Microverse to make book managament app designed to help users organize their reading interests. App is structured in three sections: book list for personal library of books, add book for adding new books and contact where you can reach users via various options.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 - **[html]**
 - **[javascript]**
+- **[css]**
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[adding book]**
-- **[removing book]**
+- **[multiple sections]**
+- **[navigation]**
+- **[footer]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back  to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
@@ -99,13 +101,6 @@ To run the project, execute the following command:
 
 - GitHub: [@memicelis](https://github.com/memicelis)
 - LinkedIn: [Elis Memic](https://www.linkedin.com/in/elis-memic-0a7393bb)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[contact-section]**
-- [ ] **[navigation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
