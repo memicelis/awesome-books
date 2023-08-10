@@ -8,6 +8,36 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px auto;
+  border: 1px solid #000;
+  padding: 5px 10px;
+}
+
+.navigation-links {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+.navigation-links li {
+  border-right: 1px solid black;
+  padding-right: 12px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-links li:last-child {
+  border: none;
+  padding: 0;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -44,13 +74,6 @@ body {
 #book-list div {
   display: flex;
   gap: 5px;
-}
-
-.separator {
-  width: 10%;
-  margin: auto;
-  border: 1px solid #000;
-  margin-bottom: 20px;
 }
 
 .form {
@@ -92,4 +115,23 @@ body {
 
 #book-list button:hover {
   background-color: rgba(240, 248, 255, 0.5);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+.contact-section h1 {
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  list-style: disc;
 }
