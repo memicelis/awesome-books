@@ -37,13 +37,15 @@
 
 - **[html]**
 - **[javascript]**
+- **[css]**
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[adding book]**
-- **[removing book]**
+- **[multiple sections]**
+- **[navigation]**
+- **[footer]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,13 +101,6 @@ To run the project, execute the following command:
 
 - GitHub: [@memicelis](https://github.com/memicelis)
 - LinkedIn: [Elis Memic](https://www.linkedin.com/in/elis-memic-0a7393bb)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[contact-section]**
-- [ ] **[navigation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
