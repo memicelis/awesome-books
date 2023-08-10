@@ -6,8 +6,16 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
+  color: #191970;
 }
 
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 24px;
+}
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -26,11 +34,12 @@ body {
 .navigation-links li {
   border-right: 1px solid black;
   padding-right: 12px;
+  text-align: center;
 }
 
 .navigation-links a {
   text-decoration: none;
-  color: #000;
+  cursor: pointer;
 }
 
 .navigation-links li:last-child {
@@ -38,11 +47,24 @@ body {
   padding: 0;
 }
 
+.date-container {
+  display: flex;
+  justify-content: end;
+  margin: 0 2%;
+}
+
+.list-section {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -50,7 +72,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  width: 95%;
+  border: 1px solid #000;
+}
+
+#book-list {
+  width: 100%;
 }
 
 #book-list article {
@@ -58,9 +85,7 @@ body {
   gap: 5px;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
   padding: 2px 10px;
-  width: 50vw;
 }
 
 #book-list article:nth-of-type(odd) {
@@ -74,6 +99,18 @@ body {
 #book-list div {
   display: flex;
   gap: 5px;
+}
+
+.add-book-section {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-book-section h1 {
+  margin-bottom: 20px;
 }
 
 .form {
@@ -102,6 +139,7 @@ body {
   padding: 2px 5px;
   margin-bottom: 20px;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .form-input button:hover {
@@ -118,6 +156,7 @@ body {
 }
 
 .contact-section {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,4 +173,27 @@ body {
 
 .contact-info {
   list-style: disc;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 5px 10px;
+  width: 95%;
+  margin: 10px 2.5%;
+  border: 1px solid #000;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p {
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
 }

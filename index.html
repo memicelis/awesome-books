@@ -13,35 +13,44 @@
       </div>
       <div class="right-block-navigation">
         <ul class="navigation-links">
-          <li><a href="#list">List</a></li>
-          <li><a href="#form">Add New</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="list-page">List</a></li>
+          <li><a class="add-page">Add New</a></li>
+          <li><a class="contact-page">Contact</a></li>
         </ul>
       </div>
     </nav>
     <div class="date-container"></div>
-    <div id="list" class="header">
-      <h1>All awesome books</h1>
-    </div>
-    <div class="book-list-container">
-      <div id="book-list"></div>
-    </div>
-    <form id="form" class="form" method="post" action="submit">
-      <h1>Add new Book</h1>
-      <div class="form-input">
-        <input type="text" id="title-input" name="title" placeholder="Title" />
-        <input
-          type="text"
-          id="author-input"
-          name="author"
-          placeholder="Author"
-        />
-        <button type="submit" id="add-book-button" class="add-book-button">
-          Add
-        </button>
+    <section class="list-section">
+      <div id="list" class="header">
+        <h1>All awesome books</h1>
       </div>
-    </form>
-    <section id="contact" class="contact-section">
+      <div class="book-list-container">
+        <div id="book-list"></div>
+      </div>
+    </section>
+    <section class="add-book-section hidden">
+      <h1>Add new Book</h1>
+      <form id="form" class="form" method="post" action="submit">
+        <div class="form-input">
+          <input
+            type="text"
+            id="title-input"
+            name="title"
+            placeholder="Title"
+          />
+          <input
+            type="text"
+            id="author-input"
+            name="author"
+            placeholder="Author"
+          />
+          <button type="submit" id="add-book-button" class="add-book-button">
+            Add
+          </button>
+        </div>
+      </form>
+    </section>
+    <section id="contact" class="contact-section hidden">
       <h1>Contact information</h1>
       <p>
         Do you have any questions or you just want to say "Hello"?<br />You can
@@ -56,6 +65,7 @@
     <footer class="footer">
       <p>© 2023 Awesome Books by Elis Memic</p>
     </footer>
+    <script src="navigation.js"></script>
     <script src="books.js"></script>
   </body>
 </html>
